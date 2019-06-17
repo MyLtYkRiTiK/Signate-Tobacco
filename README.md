@@ -37,6 +37,7 @@ The aim of competition was to detect cigarette packs on the shelf and then class
 * mmdetection
 * fastai
 * pretrainedmodels
+* albumentations
 * cv2
 
 #### Models:
@@ -72,6 +73,16 @@ I choose faster_rcnn_r101_fpn_1x with resnet101 backbone. Config in 'configs' di
 Predict test boxes and crop images at once.
 ##### remake_master.py
 Augument master images and add to train folders.
+
+###### Augumented images:
+<p float="center">
+  <img src="imgs/master_3306_0_15.jpg" height="115" />
+  <img src="imgs/master_3306_0_3.jpg" height="115" /> 
+  <img src="imgs/master_3306_0_9.jpg" height="115" /> 
+  <img src="imgs/master_3306_270_10.jpg" height="115" />
+  <img src="imgs/master_3306_90_10.jpg" height="115" /> 
+</p>
+
 ##### make_folds.py
 Devide train pictures into folders for further cross validation. 
 ##### training.py
