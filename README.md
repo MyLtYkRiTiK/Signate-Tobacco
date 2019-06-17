@@ -3,6 +3,8 @@
 
 The aim of competition is to detect cigarette packs on the shelf and then classify their brand.
 
+*Data is restricted, but it can be found [here](https://signate.jp/competitions/159).*
+
 #### Data:
 * Shelf images: high resolution shelf photos with tens and hundreds of packs. Size of 2448\*3264 or 3264\*2448 px;
 * Master images: high resolution brand images;
@@ -31,6 +33,7 @@ The aim of competition is to detect cigarette packs on the shelf and then classi
 #### Code:
 ##### make_annotations.py
 Write new annotations for cropped images and crop squares. Raw images (2448\*3264 or 3264\*2448 px) are cropped in 816\*816 px squares with 408 px indent. So if you have image of size 1632\*816 px, you would have three 816\*816 px cropped images.
+
 Make remap_dict to map original classes to range(1, class_amount+1).
 ##### crop_square_train.py 
 Crop every single pack from train images and put it in folder of it's brand. It works better if cut not rectangle original boundary boxes, but make square from it. Because there is a lot of information on the pic's edges, so square will save more information when random augumentations would apply duaring learning.
@@ -48,3 +51,9 @@ Train chosen models.
 Predict train and predict validation for stacking. But I hadn't time to implement stacking, so I just average all test predictions and don't use validation predictions.
 ##### make submition
 Averege all test predictions and write submission.
+
+#### Things that I also had to do:
+* Extract feature vectors from master images to classify brands which were not in train set.
+* Use several models and cross validation on detection stage, not only on classifying stage.
+
+(List could be extended if I knew detailes from other participants)
