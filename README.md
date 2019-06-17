@@ -1,7 +1,10 @@
 # Signate-Tobacco
+
+![alt text](imgs/test_072.jpg)
+
 ### Japan Tobacco Industry Image detection of tobacco products.
 
-The aim of competition is to detect cigarette packs on the shelf and then classify their brand.
+The aim of competition was to detect cigarette packs on the shelf and then classify their brand.
 
 *Data is restricted, but it can be found [here](https://signate.jp/competitions/159).*
 
@@ -11,6 +14,16 @@ The aim of competition is to detect cigarette packs on the shelf and then classi
 * Annotations for train images with boundary box coordinates and brand classes.
 
 #### Samples are: 
+##### Train images:
+<p float="center">
+  <img src="imgs/train_122.jpg" height="415" />
+  <img src="imgs/train_157.jpg" height="415" /> 
+</p>
+
+##### Master images:
+<p float="center">
+  <img src="imgs/2525.jpg" height="415" /> 
+</p>
 
 #### Main difficulties:
 * Pictures were large and it was hard to process them on GPU. So they were needed to be accurately cropped. The most difficult part was to maintain right box coordinates in cropped pictures when predicting test puctures. To resize pictures would be a bad idea because some pictures were not clear enough;
@@ -35,8 +48,24 @@ The aim of competition is to detect cigarette packs on the shelf and then classi
 Write new annotations for cropped images and crop squares. Raw images (2448\*3264 or 3264\*2448 px) are cropped in 816\*816 px squares with 408 px indent. So if you have image of size 1632\*816 px, you would have three 816\*816 px cropped images.
 
 Make remap_dict to map original classes to range(1, class_amount+1).
+
+###### Resized images:
+<p float="center">
+  <img src="imgs/train_025_04.jpg" height="425" />
+  <img src="imgs/train_087_01.jpg" height="425" /> 
+</p>
+
 ##### crop_square_train.py 
 Crop every single pack from train images and put it in folder of it's brand. It works better if cut not rectangle original boundary boxes, but make square from it. Because there is a lot of information on the pic's edges, so square will save more information when random augumentations would apply duaring learning.
+
+###### Cropped images:
+<p float="center">
+  <img src="imgs/train_000_1.jpg" height="115" />
+  <img src="imgs/train_148_1.jpg" height="115" /> 
+  <img src="imgs/train_150_1.jpg" height="115" /> 
+  <img src="imgs/train_182_1.jpg" height="115" /> 
+</p>
+
 ##### run detector
 I choose faster_rcnn_r101_fpn_1x with resnet101 backbone. Config in 'configs' directory.
 ##### predict_and_crop_test.py
