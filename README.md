@@ -1,6 +1,6 @@
 # Signate-Tobacco
 
-![alt text](imgs/test_072.jpg)
+![](imgs/test_072.jpg)
 
 ### Japan Tobacco Industry Image detection of tobacco products.
 
@@ -16,8 +16,8 @@ The aim of competition was to detect cigarette packs on the shelf and then class
 #### Samples are: 
 ##### Train images:
 <p float="center">
-  <img src="imgs/train_122.jpg" height="415" />
-  <img src="imgs/train_157.jpg" height="415" /> 
+  <img src="imgs/train_122.jpg" height="405" />
+  <img src="imgs/train_157.jpg" height="405" /> 
 </p>
 
 ##### Master images:
