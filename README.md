@@ -8,6 +8,10 @@ The aim of competition was to detect cigarette packs on the shelf and then class
 
 *Data is restricted, but it can be found [here](https://signate.jp/competitions/159).*
 
+#### First stage: 1013 participants
+#### Second stage: 55 participants
+#### My result is 7-th place
+
 ### Data:
 * Shelf images: high resolution shelf photos with tens and hundreds of packs. Size of 2448\*3264 or 3264\*2448 px;
 * Master images: high resolution brand images;
@@ -96,4 +100,4 @@ Averege all test predictions and write submission.
 * Extract feature vectors from master images to classify brands which were not in train set.
 * Use several models and cross validation on detection stage, not only on classifying stage.
 
-(List could be extended if I knew detailes from other participants)
+(Work on project is under constraction. Feel free to ask questions)
