@@ -8,9 +8,9 @@ The aim of competition was to detect cigarette packs on the shelf and then class
 
 *Data is restricted, but it can be found [here](https://signate.jp/competitions/159).*
 
-#### First stage: 1013 participants
-#### Second stage: 55 participants
-#### My result is 7-th place
+#### First stage: 1013 participants.
+#### Second stage: 55 participants.
+#### My result is [7-th place](https://signate.jp/competitions/160/leaderboard).
 
 ### Data:
 * Shelf images: high resolution shelf photos with tens and hundreds of packs. Size of 2448\*3264 or 3264\*2448 px;
