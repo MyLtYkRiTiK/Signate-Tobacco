@@ -74,7 +74,7 @@ Crop every single pack from train images and put it in folder of it's brand. It 
 #### run detector
 I choose faster_rcnn_r101_fpn_1x with resnet101 backbone. Config in 'configs' directory.
 
-`/mmdetection/tools/dist_train.sh configs/faster_rcnn_r101_fpn_1x.py 2`
+`~/mmdetection/tools/dist_train.sh configs/faster_rcnn_r101_fpn_1x.py 2`
 #### [predict_and_crop_test.py](scr/predict_and_crop_test.py) 
 Predict test boxes and crop images at once.
 #### [remake_master.py](scr/remake_master.py) 
