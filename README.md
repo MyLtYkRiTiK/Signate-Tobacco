@@ -46,7 +46,7 @@ The aim of competition was to detect cigarette packs on the shelf and then class
 
 ### Models:
 * Detecting packs: faster rcnn with resnet101 backbone, 12 epochs
-* (se_resnext50_32x4d, densenet161, resnet152, resnet101) \* 10 folds
+* Classification: (se_resnext50_32x4d, densenet161, resnet152, resnet101) \* 10 folds
 
 ### Code:
 #### [make_annotations.py](scr/make_annotations.py)
@@ -73,6 +73,8 @@ Crop every single pack from train images and put it in folder of it's brand. It 
 
 #### run detector
 I choose faster_rcnn_r101_fpn_1x with resnet101 backbone. Config in 'configs' directory.
+
+`/mmdetection/tools/dist_train.sh configs/faster_rcnn_r101_fpn_1x.py 2`
 #### [predict_and_crop_test.py](scr/predict_and_crop_test.py) 
 Predict test boxes and crop images at once.
 #### [remake_master.py](scr/remake_master.py) 
